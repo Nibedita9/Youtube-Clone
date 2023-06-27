@@ -1,0 +1,47 @@
+@media (max-width: 768px) {
+    .sidebar {
+      display: none;
+    }
+    .video-container{
+        margin-left: 0;
+        width: 100%;
+    }
+    .filter{
+      width:100% ;
+      left:0;
+    }
+    .video-container{
+      display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap:20px 9px;
+    }
+    .logo{
+      margin-left: 10px;
+    }
+    .search-box{
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 425px) {
+    .sidebar {
+      opacity: 0;
+    }
+    .video-container{
+      display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-gap:20px 9px;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
