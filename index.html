@@ -7,11 +7,14 @@
     <title>Youtube Clone</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
 </head>
 <body>
+
+    
     <!-- Navigation Part -->
 
     <nav class="navbar">
@@ -24,7 +27,7 @@
 
         <div class="search-box">
             <input type="text" class="search-bar" placeholder="Search">
-            <button class="search-btn">,<img src="image\search.png" alt=""></button>
+            <button class="search-btn"><img src="image\search.png" alt=""></button>
             <img src="image\mic.png" class="icon mic" alt="">
         </div>
         <div class="user-options">
@@ -39,56 +42,81 @@
     </nav>
 
     <!-- sidebar Part -->
-    <div class="sidebar">
-        <div class="shortcut-links">
-            <a href="" class="links active"><img src="image\home.png" alt=""><p>Home</p></a>
-            <a href="" class="links"><img src="image\short.png" alt=""><p>Shorts</p></a>
-            <a href="" class="links"><img src="image\subscriptions.png" alt=""><p>Subscriptions</p></a>
-            <hr class="separator">
-        </div>
+    <section class="wrap-container">
 
-        <div class="subsription">
-            <a href="" class="links"><img src="image\library.png" alt=""><p>Library</p></a>
-            <a href="" class="links"><img src="image\history.png" alt=""><p>History</p></a>
-            <a href="" class="links"><img src="image\watch later.png" alt=""><p>Watch Later</p></a>
-            <a href="" class="links"><img src="image\liked.png" alt=""><p>Liked Videos</p></a>
-            <a href="" class="links"><img src="image\lessthan.png" style ="transform: rotate(90deg);;"alt=""><p>Show more</p></a>
+        <div class="sidebar">
+            <div class="shortcut-links">
+                <a href="" class="links active"><img src="image\home.png" alt=""><p>Home</p></a>
+                <a href="" class="links"><img src="image\short.png" alt=""><p>Shorts</p></a>
+                <a href="" class="links"><img src="image\subscriptions.png" alt=""><p>Subscriptions</p></a>
+                <hr class="separator">
+            </div>
+            <div class="subsription">
+                <a href="" class="links"><img src="image\library.png" alt=""><p>Library</p></a>
+                <a href="" class="links"><img src="image\history.png" alt=""><p>History</p></a>
+                <a href="" class="links"><img src="image\watch later.png" alt=""><p>Watch Later</p></a>
+                <a href="" class="links"><img src="image\liked.png" alt=""><p>Liked Videos</p></a>
+
+                <hr class="separator">
+                <!-- <a href="" class="links"><img src="image\lessthan.png" style ="transform: rotate(90deg);;"alt=""><p>Show more</p></a> -->
+            </div>
+            <div class="subscribe-channel">
+                <h4 style="font-weight: 300; padding-left:26px;">Subscriptions</h4>
+                <a href="" class="links "><img  class="sub"  src="image\harry.jpg" alt=""><p>CodeWithHarry</p></a>
+                <a href="" class="links "><img  class="sub"  src="image\tanay.jpg" alt=""><p>Tanay Pratap</p></a>
+                <a href="" class="links "><img  class="sub"  src="image\anuj.jpg" alt=""><p>Coding Shuttle by Anuj Bhaiya</p></a>
+                <a href="" class="links "><img  class="sub"  src="image\suneja.jpg" alt=""><p>Technical Suneja</p></a>
+                <hr class="separator">
+            </div>
+            
+            <div class="explore">
+                <h4 style="font-weight: 300; padding-left:26px;">Explore</h4>
+                <a href="" class="links "><img src="image\trending.png" alt=""><p>Trending</p></a>
+                <a href="" class="links"><img src="image\shopping.png" alt=""><p>Shopping</p></a>
+                <a href="" class="links"><img src="image\music.png" alt=""><p>Music</p></a>
+                <a href="" class="links"><img src="image\movies.png" alt=""><p>Movies</p></a>
+                <a href="" class="links"><img src="image\live.png" alt=""><p>Live</p></a>
+                <a href="" class="links"><img src="image\gaming.png" alt=""><p>Gaming</p></a>
+                <a href="" class="links"><img src="image\news.png" alt=""><p>News</p></a>
+                <a href="" class="links"><img src="image\sports.png" alt=""><p>Sports</p></a>
+                <hr class="separator">
+            </div>
         </div>
-            <!-- <a href="" class="links"><img src="image\home.png" alt=""></a> -->
-    </div>
     
     <!-- filters header part -->
 
-    <section class="filter">
-        <button class="filter-options active">All</button>
-        <button class="filter-options">CSS</button>
-        <button class="filter-options">Web development</button>
-        <button class="filter-options">AI</button>
-        <button class="filter-options">Comedy</button>
-        <button class="filter-options">Entertainment</button>
-        <button class="filter-options">Javascript</button>
-        <button class="filter-options">React Js Project</button>
-        <button class="filter-options">Motivation</button>
-        <button class="filter-options">Songs</button>
-        <button class="filter-options">mood Songs</button>
-    </section>
+   <div class="main-container">
+        <div class="filter mve">
+            <button class="filter-options active">All</button>
+            <button class="filter-options">CSS</button>
+            <button class="filter-options">Web development</button>
+            <button class="filter-options">AI</button>
+            <button class="filter-options">Comedy</button>
+            <button class="filter-options">Entertainment</button>
+            <button class="filter-options">Javascript</button>
+            <button class="filter-options">React Js Project</button>
+            <button class="filter-options">Motivation</button>
+            <button class="filter-options">Songs</button>
+           
+        </div>
 
-    <!-- videos part -->
+        <!-- videos part -->
+ 
     
-    <section class="video-container">
-            <!-- <div class="video">
-                <img src="img/profile-pic.png" class="thumbnail" alt="">
-                <div class="content">
-                    <img src="img/profile-pic.png" class="channel-icon" alt="">
-                    <div class="info">
-                        <h4 class="title">youtube clone 2021 | create working youtube clone</h4>
-                        <p class="channel-name">modern web</p>
+        <div class="video-container mve">
+                <!-- <div class="video">
+                    <img src="img/profile-pic.png" class="thumbnail" alt="">
+                    <div class="content">
+                        <img src="img/profile-pic.png" class="channel-icon" alt="">
+                        <div class="info">
+                            <h4 class="title">youtube clone 2021 | create working youtube clone</h4>
+                            <p class="channel-name">modern web</p>
+                        </div>
                     </div>
-                </div>
-            </div> -->
-
-    </section>
-
+                </div> -->
+        </div>
+    </div>
+</section>
     <script src="javascipt.js"></script>
 </body>
 </html>
