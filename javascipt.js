@@ -1,17 +1,25 @@
+
+// sidebar function code here
+
 var menuIcon= document.querySelector(".toggle-btn");
 var sidebar= document.querySelector(".sidebar");
 
 menuIcon.onclick = function(){
-    sidebar.classList.toggle("small-sidebar");
+    sidebar.classList.toggle("close-sidebar");
 }
 
 
 
 const videoCardContainer = document.querySelector('.video-container');
+// Api used for request 
+let api_key="AIzaSyAcSiqUB9zb-7WCBXbSWd4-HZn14MSqLD4";  
 
-let api_key="AIzaSyAcSiqUB9zb-7WCBXbSWd4-HZn14MSqLD4";
+//  used for real time video show
 let video_http=" https://www.googleapis.com/youtube/v3/videos?";
+
+// used for channel details
 let channel_http="https://www.googleapis.com/youtube/v3/channels?";
+
 
 fetch(video_http + new URLSearchParams({
     key: api_key,
@@ -22,7 +30,7 @@ fetch(video_http + new URLSearchParams({
 }))
 .then(res => res.json())
 .then(data => {
-    // console.log(data);
+    console.log(data);
 
     data.items.forEach(item=> {
         getChannelIcon(item);
@@ -59,8 +67,21 @@ const makeVideoCard = (data) => {
             <div class="info">
                 <h4 class="title">${data.snippet.title}</h4>
                 <p class="channel-name">${data.snippet.channelTitle}</p>
+    
             </div>
         </div>
     </div>
             `;
 }
+
+
+// search box code here 
+const searchInput = document.querySelector('.search-bar');
+const searchBtn = document.querySelector('.search-btn');
+let searchLink ="https://www.youtube.com/results?search_query=";
+
+searchBtn.addEventListener('click', () => {
+    if(searchInput.value.length){
+        location.href = searchLink + searchInput.value;
+    }
+})
